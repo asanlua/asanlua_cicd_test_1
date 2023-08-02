@@ -1,0 +1,9 @@
+TOKEN "first_pipe_endpoint_read_8039" READ
+
+NODE endpoint
+SQL >
+
+    SELECT vendorid, avg(passenger_count) as passengers FROM yellow_tripdata_2018_01
+    group by vendorid
+
+
