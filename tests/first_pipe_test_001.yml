@@ -1,4 +1,4 @@
 - not_having_negative_distance:
-    sql: select avg_distance from first_pipe < 0
+    sql: select avg_distance from first_pipe where avg_distance < 0
     max_time: null
     max_bytes_read: null
