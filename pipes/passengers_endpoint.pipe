@@ -1,0 +1,9 @@
+TOKEN "passengers_endpoint_endpoint_read_0447" READ
+
+NODE endpoint
+SQL >
+
+    SELECT day, avgMerge(passengers) as avg_passengers FROM mv_pipe_0_mv
+    group by day
+
+

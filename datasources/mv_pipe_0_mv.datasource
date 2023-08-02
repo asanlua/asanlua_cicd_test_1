@@ -1,0 +1,9 @@
+# Data Source created from Pipe 'mv_pipe'
+
+SCHEMA >
+    `day` Date,
+    `passengers` AggregateFunction(avg, Int16)
+
+ENGINE "AggregatingMergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(day)"
+ENGINE_SORTING_KEY "day"

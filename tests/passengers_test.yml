@@ -1,0 +1,4 @@
+- not_having_negative_passengers:
+    sql: select avg_passengers from passengers_endpoint where avg_passengers < 0
+    max_time: null
+    max_bytes_read: null
