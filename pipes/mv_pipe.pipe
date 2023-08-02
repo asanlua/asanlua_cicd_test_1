@@ -1,0 +1,15 @@
+NODE mv_pipe_0
+SQL >
+
+    SELECT
+        toDate(tpep_pickup_datetime) AS day,
+        avgState(passenger_count) AS passengers
+    FROM yellow_tripdata_2018_01
+    GROUP BY day
+
+TYPE materialized
+DATASOURCE mv_pipe_0_mv
+ENGINE "AggregatingMergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(day)"
+ENGINE_SORTING_KEY "day"
+
