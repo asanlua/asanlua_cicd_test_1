@@ -3,7 +3,8 @@ TOKEN "first_pipe_endpoint_read_8039" READ
 NODE endpoint
 SQL >
 
-    SELECT vendorid, avg(passenger_count) as passengers FROM yellow_tripdata_2018_01
-    group by vendorid
+    SELECT toDate(tpep_pickup_datetime) as day, avg(trip_distance) as avg_distance FROM yellow_tripdata_2018_01
+    group by day
+    order by day desc
 
 
