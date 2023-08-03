@@ -14,7 +14,7 @@
           - master
     jobs:
       cd:  # deploy changes to workspace 'asanlua_cicd_test_1'
-        uses: tinybirdco/ci/.github/workflows/cd.yml@v1.1.1
+        uses: tinybirdco/ci/.github/workflows/cd.yml@v1.1.2
         with:
           tb_deploy: false
           data_project_dir: .
